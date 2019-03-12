@@ -1,0 +1,136 @@
+body {
+    background:#0D343A;
+    background:-webkit-gradient(linear,0% 0%,0% 100%, from(rgb(13, 52, 58)), to(#0d3439)  );
+    background: -moz-linear-gradient(top, rgba(13,52,58,1) 0%, rgb(13, 52, 58) 100%);
+
+    overflow:hidden;}
+
+
+.drop {
+    background:-webkit-gradient(linear,0% 0%,0% 100%, from(rgba(13,52,58,1) ), to(rgba(255,255,255,0.6))  );
+    background: -moz-linear-gradient(top, rgba(13,52,58,1) 0%, rgba(255,255,255,.6) 100%);
+    width:1px;
+    height:89px;
+    position: absolute;
+    bottom:200px;
+    -webkit-animation: fall .63s linear infinite;
+    -moz-animation: fall .63s linear infinite;
+
+}
+
+/* animate the drops*/
+@-webkit-keyframes fall {
+    to {margin-top:900px;}
+}
+@-moz-keyframes fall {
+    to {margin-top:900px;}
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background-color:#B7E3E6;
+}
+
+.boat {
+    width: 300px;
+    height: 650px;
+    background-image: url(ship.png);
+    background-size: contain;
+    position: absolute;
+    -webkit-animation: boat 10s infinite linear alternate;
+    -moz-animation: boat 10s infinite linear alternate;
+    -ms-animation: boat 10s infinite linear alternate;
+    -o-animation: boat 10s infinite linear alternate;
+    animation: boat 10s infinite linear alternate;
+    transform-origin: 50% 100%;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes boat {
+    0% {
+        transform: rotateZ(-30deg)
+    }
+    100% {
+        transform: rotateZ(30deg)
+    }
+}
+
+@keyframes boat {
+    0% {
+        transform: rotateZ(-30deg)
+    }
+    100% {
+        transform: rotateZ(30deg)
+    }
+}
+
+.wave1 {
+    width: 100%;
+    height: 155px;
+    background-image: url(water1.png);
+    background-size: contain;
+    position: absolute;
+    bottom: -20px;
+    background-position-x: 0;
+    animation: wave 3s ease-in-out infinite alternate-reverse;
+}
+
+.wave2 {
+    width: 100%;
+    height: 155px;
+    background-image: url(water3.png);
+    background-size: contain;
+    position: absolute;
+    bottom: -20px;
+    background-position-x: 40px;
+    -webkit-animation-delay: 0.5s;
+    -moz-animation-delay:0.5s;
+    -o-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+    animation: wave 2s ease-in-out infinite alternate;
+}
+
+.wave3 {
+    width: 100%;
+    height: 155px;
+    background-image: url(water2.png);
+    background-size: contain;
+    position: absolute;
+    bottom: -20px;
+    background-position-x: 160px;
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay:1s;
+    -o-animation-delay: 1s;
+    animation-delay: 1s;
+    animation: wave 3s ease-in-out infinite alternate-reverse;
+}
+
+.wave4 {
+    width: 100%;
+    height: 155px;
+    background-image: url(water1.png);
+    background-size: contain;
+    position: absolute;
+    bottom: -20px;
+    background-position-x: 120px;
+    -webkit-animation-delay: 1.5s;
+    -moz-animation-delay:1.5s;
+    -o-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+    animation: wave 2s ease-in-out infinite alternate;
+}
+
+@keyframes wave {
+    0%, 100% {
+        bottom:-20px;
+    }
+    50% {
+        bottom:0;
+    }
+}
